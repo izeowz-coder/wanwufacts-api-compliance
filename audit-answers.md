@@ -96,7 +96,14 @@ Still requires an actual screenshot from the signed-in Google account:
 
 1. OAuth consent page showing **Wanwu Facts Publisher** and both requested YouTube scopes;
 2. Google Account third-party access page showing how authorization can be revoked;
-3. GitHub Actions manual-run page showing the visibility choice; and
-4. a dry-run artifact manifest showing title, description, visibility and schedule without uploading a video.
+
+Ready as verified workflow evidence:
+
+3. a successful GitHub Actions dry run with owner-selected private visibility and the production switches disabled; and
+4. a sanitized manifest showing title, description, visibility and planned schedule without uploading a video.
+
+The detailed workflow record and sanitized manifest should be submitted
+privately as audit attachments. They are intentionally not published on the
+public compliance site.
 
 Do not submit credentials, authorization codes, tokens or repository secrets as evidence.
