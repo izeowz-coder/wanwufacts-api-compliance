@@ -12,6 +12,7 @@ HTML_FILES = [
     ROOT / "privacy.html",
     ROOT / "terms.html",
     ROOT / "data-deletion.html",
+    ROOT / "dry-run-evidence.html",
 ]
 
 
