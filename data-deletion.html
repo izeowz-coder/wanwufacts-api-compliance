@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Authorization revocation and data deletion instructions for Wanwu Facts Publisher.">
+    <title>Data Deletion · Wanwu Facts Publisher</title>
+    <link rel="stylesheet" href="assets/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="index.html">
+          <span class="brand-mark" aria-hidden="true">W</span>
+          <span>Wanwu Facts Publisher</span>
+        </a>
+        <div class="nav-links">
+          <a href="index.html">Overview</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="data-deletion.html" aria-current="page">Deletion</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="wrap legal">
+      <p class="eyebrow">Owner control</p>
+      <h1>Revoke Access and Request Data Deletion</h1>
+      <p class="hero-copy">
+        The authorized channel owner can stop future access immediately and can
+        request deletion of data stored by this client.
+      </p>
+
+      <h2>Step 1 · Revoke Google access</h2>
+      <p>
+        Visit
+        <a href="https://security.google.com/settings/security/permissions">Google Account security settings</a>,
+        locate the authorization for Wanwu Facts Publisher and remove access.
+        This invalidates future API access. The publishing workflow will stop
+        because it cannot refresh the token.
+      </p>
+
+      <h2>Step 2 · Request deletion of client-held data</h2>
+      <p>
+        Open a
+        <a href="https://github.com/izeowz-coder/wanwufacts-api-compliance/issues/new?title=Data%20deletion%20request">data deletion request</a>
+        with the title “Data deletion request”. State only that you control the
+        configured channel and want client-held API records deleted. Do not
+        include passwords, OAuth codes, access tokens, refresh tokens or other
+        secrets.
+      </p>
+
+      <h2>Step 3 · Verification and completion</h2>
+      <p>
+        The operator may request a non-secret ownership confirmation. Once
+        verified, stored YouTube API response data and active OAuth secrets will
+        be deleted as soon as practical and within seven calendar days. A
+        completion notice will be posted to the request.
+      </p>
+
+      <div class="notice">
+        Deleting data stored by Wanwu Facts Publisher does not delete videos or
+        other information stored by YouTube. To delete YouTube-hosted content,
+        use YouTube Studio or another authorized client that supports deletion.
+      </div>
+
+      <h2>Automatic deletion</h2>
+      <p>
+        Even without a request, completed YouTube API response data is
+        automatically removed from workflow state no later than 30 days after
+        completion. Build and audit artifacts expire after no more than 14 days.
+      </p>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-row">
+        <span>Wanwu Facts Publisher</span>
+        <div class="footer-links">
+          <a href="index.html">Overview</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

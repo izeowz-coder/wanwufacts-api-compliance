@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Privacy Policy for Wanwu Facts Publisher.">
+    <title>Privacy Policy · Wanwu Facts Publisher</title>
+    <link rel="stylesheet" href="assets/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="index.html">
+          <span class="brand-mark" aria-hidden="true">W</span>
+          <span>Wanwu Facts Publisher</span>
+        </a>
+        <div class="nav-links">
+          <a href="index.html">Overview</a>
+          <a href="privacy.html" aria-current="page">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="data-deletion.html">Deletion</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="wrap legal">
+      <p class="eyebrow">Effective 23 July 2026</p>
+      <h1>Privacy Policy</h1>
+      <p class="hero-copy">
+        This policy explains how Wanwu Facts Publisher accesses, uses, stores
+        and deletes information when it uses YouTube API Services.
+      </p>
+
+      <div class="notice">
+        Wanwu Facts Publisher is a private, single-owner internal tool. It is
+        not available for public registration and does not operate on behalf of
+        unrelated YouTube users.
+      </div>
+
+      <h2>1. Operator and scope</h2>
+      <p>
+        Wanwu Facts Publisher is operated by an independent developer and sole
+        proprietor for the Wanwu Facts educational channel. Questions or
+        privacy complaints can be submitted through the
+        <a href="https://github.com/izeowz-coder/wanwufacts-api-compliance/issues/new">public support form</a>.
+        Do not include passwords, OAuth codes, access tokens or other secrets in
+        a public issue.
+      </p>
+
+      <h2>2. Use of YouTube API Services</h2>
+      <p>
+        The client uses YouTube API Services and is subject to the
+        <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>.
+        Google's handling of information is described in the
+        <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.
+      </p>
+
+      <h2>3. Information accessed</h2>
+      <p>The client accesses only the information necessary to:</p>
+      <ul>
+        <li>confirm the authenticated owner controls the configured channel;</li>
+        <li>upload original video, thumbnail and metadata selected by the owner;</li>
+        <li>set the owner-selected visibility and, when selected, publication time;</li>
+        <li>check upload and processing status; and</li>
+        <li>prevent duplicate uploads and resume interrupted uploads.</li>
+      </ul>
+      <p>
+        This may include the channel ID and basic channel metadata, video IDs,
+        upload-session information, processing status, owner-created titles,
+        descriptions, tags, thumbnails, video files and schedules.
+      </p>
+
+      <h2>4. OAuth permissions</h2>
+      <p>The client requests only these two Google OAuth scopes:</p>
+      <ul>
+        <li><code>youtube.upload</code> to upload owner-approved videos; and</li>
+        <li><code>youtube.readonly</code> to verify the authenticated channel identity and processing status.</li>
+      </ul>
+      <p>
+        The client never requests, collects or stores the owner's Google or
+        YouTube password. OAuth tokens are stored as GitHub Actions Secrets and
+        are never committed to source control or displayed in logs.
+      </p>
+
+      <h2>5. How information is used and shared</h2>
+      <p>
+        Authorized data is used only for channel verification, video upload,
+        processing confirmation, retry safety and publication records. It is
+        not sold, used for advertising, used to profile viewers or shared with
+        unrelated third parties. GitHub Actions and Google/YouTube process data
+        only as infrastructure providers needed to run the client.
+      </p>
+
+      <h2>6. Storage and retention</h2>
+      <ul>
+        <li>OAuth refresh tokens are retained only while the owner keeps the authorization active.</li>
+        <li>YouTube API response data in workflow state is automatically deleted no later than 30 days after completion.</li>
+        <li>Build and audit artifacts expire after no more than 14 days.</li>
+        <li>Interrupted upload-session information is retained only to resume or safely terminate the pending upload.</li>
+        <li>Non-API editorial source material and original production files may be retained separately as the operator's own content.</li>
+      </ul>
+
+      <h2>7. Cookies and analytics</h2>
+      <p>
+        This static documentation site does not intentionally set cookies,
+        operate analytics or serve advertising. GitHub Pages may process routine
+        service logs under
+        <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's Privacy Statement</a>.
+      </p>
+
+      <h2>8. Revoking access</h2>
+      <p>
+        The owner can revoke the client's access at any time from
+        <a href="https://security.google.com/settings/security/permissions">Google Account security settings</a>.
+        Revocation prevents future API access. The automated workflow will fail
+        closed if the authorization is missing or invalid.
+      </p>
+
+      <h2>9. Deletion requests</h2>
+      <p>
+        A request to delete data stored by the client can be submitted using the
+        process on the <a href="data-deletion.html">Data Deletion page</a>.
+        Verified requests will be completed as soon as practical and within
+        seven calendar days. Deleting client-held records does not delete
+        content stored by YouTube; YouTube content must be removed through
+        YouTube or another authorized client that supports deletion.
+      </p>
+
+      <h2>10. Security</h2>
+      <p>
+        The operator uses least-privilege OAuth scopes, repository access
+        controls, GitHub Actions Secrets, channel-ID verification, audit logs,
+        short artifact retention and fail-closed production switches. No method
+        can eliminate all risk, but access is limited to what this single-owner
+        publishing use case requires.
+      </p>
+
+      <h2>11. Changes</h2>
+      <p>
+        Material changes to API use, data access or retention will be reflected
+        on this page before the changed use is deployed. If the use case changes
+        materially, the operator will seek any review required by YouTube API
+        Services policies.
+      </p>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-row">
+        <span>Wanwu Facts Publisher</span>
+        <div class="footer-links">
+          <a href="index.html">Overview</a>
+          <a href="terms.html">Terms</a>
+          <a href="data-deletion.html">Data Deletion</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

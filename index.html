@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Compliance documentation for Wanwu Facts Publisher, a single-owner internal publishing client using YouTube Data API v3.">
+    <meta name="robots" content="index,follow">
+    <title>Wanwu Facts Publisher · API Compliance</title>
+    <link rel="stylesheet" href="assets/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="index.html">
+          <span class="brand-mark" aria-hidden="true">W</span>
+          <span>Wanwu Facts Publisher</span>
+        </a>
+        <div class="nav-links">
+          <a href="#purpose">Purpose</a>
+          <a href="#controls">Controls</a>
+          <a href="#data">Data</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero wrap">
+        <p class="eyebrow">API compliance documentation</p>
+        <h1>A narrow publishing tool with explicit owner control.</h1>
+        <p class="hero-copy">
+          Wanwu Facts Publisher is a private, single-owner automation client for
+          producing and scheduling original educational videos on one channel.
+          It is not offered to the public, does not sell access, and does not
+          operate on third-party channels.
+        </p>
+        <div class="badges" aria-label="Application properties">
+          <span class="badge safe">Single authorized owner</span>
+          <span class="badge">YouTube Data API v3</span>
+          <span class="badge">Two minimum OAuth scopes</span>
+          <span class="badge">30-day API data limit</span>
+          <span class="badge">No analytics or advertising</span>
+        </div>
+      </section>
+
+      <section class="section wrap" id="purpose">
+        <div class="section-head">
+          <div>
+            <span class="section-number">01 · Purpose</span>
+          </div>
+          <div>
+            <h2>One job, one channel, one owner.</h2>
+            <p class="section-intro">
+              The client turns already verified source material into original
+              Mandarin educational videos, performs automated safety and
+              evidence checks, then uploads only to the owner-controlled Wanwu
+              Facts channel.
+            </p>
+          </div>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <h3>Original production</h3>
+            <p>
+              Scripts, narration, subtitles, graphics, thumbnails and rendered
+              video files are created by the operator's own workflow. Source
+              references are preserved in the video description.
+            </p>
+          </article>
+          <article class="card">
+            <h3>No public accounts</h3>
+            <p>
+              There is no public sign-up, no customer dashboard and no
+              multi-tenant access. The only OAuth user is the channel owner.
+            </p>
+          </article>
+          <article class="card">
+            <h3>No engagement automation</h3>
+            <p>
+              The client does not automate views, likes, comments,
+              subscriptions, recommendations or audience profiling.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section wrap" id="controls">
+        <div class="section-head">
+          <div>
+            <span class="section-number">02 · Owner controls</span>
+          </div>
+          <div>
+            <h2>Publishing remains disabled until every gate passes.</h2>
+            <p class="section-intro">
+              OAuth success alone cannot enable production uploads. The owner
+              must separately confirm API audit approval and explicitly turn on
+              the schedule.
+            </p>
+          </div>
+        </div>
+        <div class="grid">
+          <article class="card control-card">
+            <h3>Visibility choice</h3>
+            <p>The owner can select one of three modes before upload:</p>
+            <ul>
+              <li>Scheduled public</li>
+              <li>Private</li>
+              <li>Unlisted</li>
+            </ul>
+          </article>
+          <article class="card control-card">
+            <h3>Content review trail</h3>
+            <p>
+              Title, description, tags, source evidence, safety audit,
+              visibility and schedule are written to a downloadable manifest
+              before upload.
+            </p>
+          </article>
+          <article class="card control-card">
+            <h3>Fail-closed switches</h3>
+            <p>
+              Production requires both an API-audit approval flag and a separate
+              automation flag. Missing credentials, scope mismatch or channel
+              mismatch stops the run.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section wrap" aria-labelledby="flow-title">
+        <div class="section-head">
+          <div>
+            <span class="section-number">03 · Data flow</span>
+          </div>
+          <div>
+            <h2 id="flow-title">A short, inspectable path to publication.</h2>
+          </div>
+        </div>
+        <div class="flow" aria-label="Application architecture flow">
+          <div class="flow-step">
+            <span class="flow-label">Step 1</span>
+            <strong>Owner consent</strong>
+            <p>Google OAuth grants upload and channel-read access.</p>
+          </div>
+          <div class="flow-step">
+            <span class="flow-label">Step 2</span>
+            <strong>Local production</strong>
+            <p>Script, narration, graphics and video are generated.</p>
+          </div>
+          <div class="flow-step">
+            <span class="flow-label">Step 3</span>
+            <strong>Safety audit</strong>
+            <p>Sources, claims, media integrity and metadata are checked.</p>
+          </div>
+          <div class="flow-step">
+            <span class="flow-label">Step 4</span>
+            <strong>Identity lock</strong>
+            <p>The authorized channel ID must exactly match the configured ID.</p>
+          </div>
+          <div class="flow-step">
+            <span class="flow-label">Step 5</span>
+            <strong>Upload and verify</strong>
+            <p>Video is uploaded, processed, recorded and later pruned.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section wrap" id="data">
+        <div class="section-head">
+          <div>
+            <span class="section-number">04 · API use</span>
+          </div>
+          <div>
+            <h2>Minimum scopes and limited retention.</h2>
+            <p class="section-intro">
+              The client requests only the permissions required to verify the
+              channel and upload owner-approved videos.
+            </p>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Operation</th>
+                <th>Purpose</th>
+                <th>Stored data</th>
+                <th>Retention</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>channels.list</code></td>
+                <td>Confirm the authenticated owner controls the configured channel.</td>
+                <td>Channel ID match result.</td>
+                <td>Only as needed for the run; API response data no longer than 30 days.</td>
+              </tr>
+              <tr>
+                <td><code>videos.insert</code></td>
+                <td>Upload an original video with title, description, tags and visibility.</td>
+                <td>Video ID, upload result and schedule.</td>
+                <td>No longer than 30 days in workflow state.</td>
+              </tr>
+              <tr>
+                <td><code>thumbnails.set</code></td>
+                <td>Attach the original thumbnail created for the video.</td>
+                <td>Success or failure only.</td>
+                <td>No longer than 30 days.</td>
+              </tr>
+              <tr>
+                <td><code>videos.list</code></td>
+                <td>Confirm processing succeeds before closing the run.</td>
+                <td>Temporary processing status.</td>
+                <td>No longer than 30 days; artifacts expire after 14 days.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section wrap" aria-labelledby="documents-title">
+        <div class="section-head">
+          <div>
+            <span class="section-number">05 · Evidence</span>
+          </div>
+          <div>
+            <h2 id="documents-title">Policies and review materials.</h2>
+          </div>
+        </div>
+        <div class="download">
+          <div>
+            <h3>API compliance evidence pack</h3>
+            <p>
+              Application overview, OAuth scope rationale, architecture,
+              publishing controls and data lifecycle.
+            </p>
+          </div>
+          <a class="button" href="evidence/audit-evidence-complete.pdf">Download PDF</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-row">
+        <span>Wanwu Facts Publisher · Last updated 23 July 2026</span>
+        <div class="footer-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Use</a>
+          <a href="data-deletion.html">Data Deletion</a>
+          <a href="https://www.youtube.com/t/terms">YouTube Terms</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
